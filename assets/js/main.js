@@ -142,10 +142,10 @@
   /**
    * Navmenu Scrollspy
    */
-  let navmenulinks = document.querySelectorAll('.navmenu a');
+  let navmenulink = document.querySelectorAll('.navmenu a');
 
   function navmenuScrollspy() {
-    navmenulinks.forEach(navmenulink => {
+    navmenulink.forEach(navmenulink => {
       if (!navmenulink.hash) return;
       let section = document.querySelector(navmenulink.hash);
       if (!section) return;
@@ -245,3 +245,34 @@
   }
   window.addEventListener('load', aosInit);
 
+  document.querySelectorAll('.service-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        let targetId = this.getAttribute('href').substring(1);
+        let targetElement = document.getElementById(targetId);
+        let offset = 120; // Adjust this value for margin from top
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - offset,
+                behavior: "smooth"
+            });
+        }
+    });
+});
+
+document.querySelectorAll('.footer_services').forEach(link => {
+  link.addEventListener('click', function (e) {
+      e.preventDefault();
+      let targetId = this.getAttribute('href').substring(1);
+      let targetElement = document.getElementById(targetId);
+      let offset = 120; // Adjust this value for margin from top
+
+      if (targetElement) {
+          window.scrollTo({
+              top: targetElement.offsetTop - offset,
+              behavior: "smooth"
+          });
+      }
+  });
+});

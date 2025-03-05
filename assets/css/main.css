@@ -172,6 +172,11 @@ h6 {
   max-height: 70px;
 }
 
+.header .logo:focus,.header .logo:active{
+  box-shadow: 0;
+  outline: 0;
+}
+
 @media (max-width: 768px) { /* Adjust the max-width as needed */
   .header .logo img {
       max-height: 60px; /* Smaller size for mobile devices */
@@ -537,7 +542,6 @@ h6 {
 
 
 
-
 /*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
@@ -627,8 +631,8 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
-  scroll-margin-top: 90px;
+  padding: 20px 0;
+  scroll-margin-top: 50px;
   overflow: clip;
 }
 
@@ -656,6 +660,7 @@ section,
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 10px;
+  margin-top: 2.5rem;
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   color: #E08300;
@@ -688,6 +693,7 @@ section,
     font-weight: 700;
     margin-bottom: 20px;
     padding-bottom: 10px;
+    margin-top: 2rem;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     color: #E08300;
@@ -699,7 +705,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   position: relative;
-  padding-top: 160px;
+  padding-top: 10rem;
   background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 50%, color-mix(in srgb, var(--accent-color), transparent 98%) 25%, transparent 50%);
 }
 
@@ -996,6 +1002,20 @@ path.two {
   color: #ddd;
 }
 
+@media (max-width: 1100px) {
+  .hero .customers-badge {
+    position: static;
+    margin: 1rem auto;
+    max-width: 300px;
+    height: 150px;
+  }
+  .hero .hero-image img {
+    max-width: 100%;
+    width: 600px;
+    height:32rem;
+    border-radius: 20px;
+  }
+
 @media (max-width: 992px) {
   .hero .customers-badge {
     position: static;
@@ -1008,6 +1028,16 @@ path.two {
     height:25rem;
     border-radius: 20px;
   }
+
+}
+
+
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 }
 
 .hero .stats-row {
@@ -1057,14 +1087,14 @@ path.two {
 }
 
 .hero .stat-item .stat-content h4 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 0.25rem;
-  font-weight: 600;
+  font-weight: 700;
+  color: #02468b;
 }
 
 .hero .stat-item .stat-content p {
-  font-size: 0.875rem;
-  
+  font-size: 1rem;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   margin: 0;
 }
@@ -1115,7 +1145,7 @@ path.two {
 .about .about-description {
   margin-bottom: 1rem;
   text-align: justify;
-  font-size: 20px;
+  font-size: 1rem;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
@@ -1165,7 +1195,7 @@ path.two {
 
 .card {
   transition: transform 0.2s; /* Add a hover effect */
-  max-width: 280px; /* Set a maximum width for the cards */
+  /* max-width: 280px;*/
   margin: auto;
   border: none;
 }
@@ -1196,7 +1226,9 @@ path.two {
     flex-direction: column;
     gap: 2rem;
   }
+
 }
+
 
 @media (max-width: 992px) {
   .about .image-wrapper .images {
@@ -1216,6 +1248,8 @@ path.two {
   position: absolute;
   top: 20%;
   left: -10%;
+  /* background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%); */
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   width: 45%;
   border: 8px solid var(--surface-color);
 }
@@ -1282,13 +1316,116 @@ path.two {
   }
 }
 
+
+/*--------------------------------------------------------------
+team profile section
+----------------------------------------------------------------*/
+
+/* Team Profile Card */
+.team-profile {
+  border-radius: 60px; /* Capsule Shape */
+  border: 2px solid #E08300;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  width: 100%;
+  max-width: 400px; /* Ensures consistency */
+  min-height: 120px; /* Equal Height */
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.team-profile:hover {
+  transform: translateY(-5px);
+}
+
+/* Profile Image */
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+/* Profile Info */
+.profile-info {
+  flex-grow: 1;
+  text-align:left;
+}
+
+.profile-name {
+  font-size: 1.2rem; /* Adjusted for better visibility */
+  font-weight: bold;
+  margin: 0px 0px;
+}
+
+.profile-position {
+  font-size: 1rem; /* Slightly smaller for hierarchy */
+  color: #666;
+  margin: 5px 5px;
+}
+
+/* Email Button */
+.send-mail-button {
+  padding: 5px 15px;
+  font-weight: 600;
+  font-size: 1.2rem; /* Adjusted for consistency */
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+  display: inline-block;
+}
+
+.send-mail-button i {
+  margin-left: 5px;
+}
+
+.send-mail-button:hover {
+  color: #ff9800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-profile {
+      /* flex-direction: column; */
+      text-align: center;
+      min-height: auto;
+      padding: 10px;
+  }
+
+  .profile-image {
+      margin-right: 0px;
+  }
+
+  /* .profile-info {
+      text-align: center;
+  } */
+
+  .profile-name {
+      font-size: 1.1rem;
+  }
+
+  .profile-position {
+      font-size: 1.2rem;
+  }
+
+  .send-mail-button {
+      font-size: 1rem;
+  }
+}
+
+
 /*--------------------------------------------------------------
 portfolio section
 ----------------------------------------------------------------*/
 
 
 .portfolio {
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 .portfolio button {
   text-transform: capitalize;
@@ -1380,7 +1517,7 @@ portfolio section
 }
 .portfolio-box .portfolio-info .caption {
   text-align: center;
-  color:#f86d35;
+  color:#FFEB55;
   font-weight:500;
   position: absolute;
   top: 80%;
@@ -1440,18 +1577,20 @@ portfolio section
 }
 
 .features-cards .feature-box h4 {
-  font-size: 20px;
+  font-size: 21px;
+  color: #02468b;
   font-weight: 700;
   margin: 0 0 10px 0;
 }
 
 .features-cards .feature-box p {
-  font-size: 15px;
+  font-size:16px;
   margin-bottom: 0;
 }
 
 .features-cards .feature-box.orange {
   background-color: #fff3e2;
+  border: 1px solid #fcae41;
 }
 
 .features-cards .feature-box.orange i {
@@ -1460,6 +1599,7 @@ portfolio section
 
 .features-cards .feature-box.blue,.stats-row .stat-item.blue {
   background-color: #deedfd;
+  border:1px solid  #3294fd
 }
 
 .features-cards .feature-box.blue i {
@@ -1468,6 +1608,7 @@ portfolio section
 
 .features-cards .feature-box.green,.stats-row .stat-item.green {
   background-color: #d5f1e4;
+  border: 1px solid #3af9a0;
 }
 
 .features-cards .feature-box.green i {
@@ -1476,6 +1617,7 @@ portfolio section
 
 .features-cards .feature-box.red,.stats-row .stat-item.red {
   background-color: #fdeded;
+  border: 1px solid #fb4040;
 }
 
 .features-cards .feature-box.red i {
@@ -1575,6 +1717,7 @@ portfolio section
   padding: 30px;
   background:#abcff2;
   border-radius: 10px;
+  border: 1px solid #02468b;
   transition: all 0.3s ease;
 
 }
@@ -1610,14 +1753,14 @@ portfolio section
 .services .service-card h3 {
   font-size: 22px;
   font-weight: 700;
+  color: #02468b;
   margin-bottom: 15px;
 }
 
 .services .service-card p {
   margin-bottom: 25px;
-  
   color: color-mix(in srgb, var(--default-color), transparent 25%);
-  font-size: 15px;
+  font-size: 17px;
   text-align: justify;
   line-height: 1.6;
 }
@@ -1639,6 +1782,7 @@ portfolio section
   color: #02468b;
   font-size: 2rem;
   font-weight:bold;
+  font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
@@ -1729,6 +1873,7 @@ portfolio section
   font-size: 2rem;
   font-weight: 700;
   color: #0253A6;
+  font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }

@@ -44,7 +44,7 @@
       class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets\img\AKET_INTEGRATED_SOLUTIONS_PVT_LTD.png" alt="AKET_INTEGRATED_SOLUTIONS_PVT_LTD">
+        <img class="logo_img" src="assets\img\AKET_INTEGRATED_SOLUTIONS_PVT_LTD.png" alt="AKET_INTEGRATED_SOLUTIONS_PVT_LTD">
         <h1 class="sitename">AKET</h1>
       </a>
 
@@ -53,7 +53,14 @@
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#services">Services</a></li>
+          <li class="dropdown" id="service_dropdown"><a href="#services"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#IT_Turnkey_projects" class="service-link">IT Turnkey Services</a></li>
+              <li><a href="#CCTV_Surveillance_System" class="service-link">CCTV Surveillance System</a></li>
+              <li><a href="#Data_and_Networking" class="service-link">Data and Networking</a></li>
+              <li><a href="#Fire_Alarm_System" class="service-link">Fire Alarm System</a></li>
+            </ul>
+          </li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -140,7 +147,7 @@
         </div>
 
         <!-- Section Title -->
-        <div class="container section-title pb-0 mb-0 pt-5 mt-5" data-aos="fade-up">
+        <div class="container section-title pb-0 mb-0 pt-5 mt-3" data-aos="fade-up">
           <h2 class="">Our Expertise</h2>
         </div><!-- End Section Title -->
         <!-- <div class="container mt-5"> -->
@@ -148,9 +155,9 @@
         <div class="container mt-5">
           <div class="row stats-row gy-0 d-flex justify-content-center text-center" data-aos="fade-up"
             data-aos-delay="500">
-            <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
+            <div class="col-lg-4 col-md-12 col-sm-12 d-flex justify-content-center mb-4 mb-lg-0">
               <!-- Added mb-3 for spacing on mobile -->
-              <div class="stat-item card border p-3 red" style="margin: 0;"> <!-- Removed margin -->
+              <div class="stat-item card p-3 red" style="margin: 0;"> <!-- Removed margin -->
                 <div class="stat-icon mb-3">
                   <i class="bi bi-tag fs-2"></i> <!-- Increased icon size -->
                 </div>
@@ -161,9 +168,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
+            <div class="col-lg-4 col-md-12 col-sm-12 d-flex justify-content-center mb-4 mb-lg-0">
               <!-- Added mb-3 for spacing on mobile -->
-              <div class="stat-item card border p-3 blue" style="margin: 0;"> <!-- Removed margin -->
+              <div class="stat-item card  p-3 blue" style="margin: 0;"> <!-- Removed margin -->
                 <div class="stat-icon mb-3">
                   <i class="bi bi-gear fs-2"></i> <!-- Increased icon size -->
                 </div>
@@ -174,10 +181,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
+            <div class="col-lg-4 col-md-12 col-sm-12 d-flex justify-content-center mb-4 mb-lg-0">
               <!-- Added mb-3 for spacing on mobile -->
-              <div class="stat-item card border p-3 green" style="margin: 0;"> <!-- Removed margin -->
-                <div class="stat-icon mb-3">
+              <div class="stat-item card p-3 green" style="margin: 0;"> <!-- Removed margin -->
+                <div class="stat-icon mb-2">
                   <i class="bi bi-file-earmark-check fs-2"></i> <!-- Increased icon size -->
                 </div>
                 <div class="stat-content">
@@ -209,12 +216,15 @@
 
           <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
             <h2 class="about-title">Aket Solutions: Empowering Businesses with Innovative IT Infrastructure</h2>
-            <p class="about-description px-2">Welcome to <b>Aket Solutions</b>—where technology meets innovation for
-               business success.We prioritize safety to achieve incident-free projects and boast a track record
-              of timely project completion that supports clients’ business goals.
+            <p class="about-description px-2">Welcome to <b>Aket Solutions</b>—where technology and innovation drive
+               business success. We are committed to delivering cutting-edge solutions while prioritizing 
+               safety to ensure incident-free projects. Our proven track record of on-time project completion
+                helps clients achieve their business goals efficiently.
             </p>
-            <p class="about-description px-2"> Our IT Turnkey services offer a complete range of IT Hardware 
-              and Software Solutions establishing us as your ‘One-Stop Service Provider.’
+            <p class="about-description px-2">Our IT Turnkey Services provide a comprehensive 
+              range of IT hardware and software solutions, making us your one-stop service provider. From planning 
+              and implementation to seamless integration and ongoing support, we deliver tailored, scalable, and 
+              future-ready IT solutions to empower your business growth.
             </p>
             
 
@@ -231,7 +241,7 @@
             <div class="image-wrapper">
               <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
                 <img src="assets/img/about-5.webp" alt="Business Meeting" class="img-fluid main-image rounded-4">
-                <img src="assets/img/about-2.webp" alt="Team Discussion" class="img-fluid small-image rounded-4">
+                <img src="assets\img\AKET_INTEGRATED_SOLUTIONS_PVT_LTD.png" alt="Team Discussion" class="img-fluid small-image rounded-4">
               </div>
             </div>
           </div>
@@ -271,64 +281,51 @@
           </div>
         </div>
 
-        <div class="container my-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="container my-5" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4 pt-3 justify-content-center">
-            <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
-              <div class=" card team-profile flex-fill py-3 px-4"
-                style="border-radius: 50px;  border:1px solid #E08300; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
-                <div class="card-body  d-flex align-items-center" data-aos="zoom-out" data-aos-delay="300"
-                  style="height: 60px; padding: 5px;">
-                  <img src="assets\img\Akshaykumar_Phadtare.jpg" alt="Akshaykumar_Phadtare" class="profile-image"
-                    style="width: 70px; height: 70px; border-radius: 50%; margin-right: 10px;">
-                  <div class="text-left"> <!-- Added a div for text alignment -->
-                    <h5 class="profile-name px-1" style="font-size: 1rem; font-weight: bolder; margin: 0;">Mr. Akshaykumar Phadtare</h5>
-                    <p class="profile-position px-1 pt-1" style="font-size: 0.8rem; margin: 0;">Founder</p>
-                    <a href="mailto:Akshay@aketintregretedsolutions.com" class="send-mail-button"
-                      style="padding: 2px 5px; font-weight: 600; font-size: 16px;">
-                      mail <i class="bi bi-arrow-right-circle-fill"></i>
-                    </a>
+              <!-- Akshaykumar Phadtare -->
+              <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                  <div class="team-profile">
+                      <img src="assets/img/Akshaykumar_Phadtare.jpg" alt="Akshaykumar Phadtare" class="profile-image">
+                      <div class="profile-info">
+                          <h5 class="profile-name">Mr. Akshaykumar Phadtare</h5>
+                          <p class="profile-position">Founder</p>
+                          <a href="mailto:Akshay@aketintregretedsolutions.com" class="send-mail-button">
+                              mail <i class="bi bi-arrow-right-circle-fill"></i>
+                          </a>
+                      </div>
                   </div>
-                </div>
               </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
-              <div class="card flex-fill py-3 px-4"
-                style="border-radius: 50px; border:1px solid #E08300; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
-                <div class="card-body d-flex align-items-center" data-aos="zoom-out" data-aos-delay="300"
-                  style="height: 60px; padding: 5px;">
-                  <img src="assets\img\Rameshwari_Gaikwad.png" alt="Rameshwari Gaikwad" class="profile-image"
-                    style="width: 70px; height: 70px; border-radius: 50%; margin-right: 10px;">
-                  <div class="text-left"> <!-- Added a div for text alignment -->
-                    <h5 class="profile-name px-1" style="font-size: 1rem; font-weight: bolder; margin: 0;">Mrs. Rameshwari Gaikwad</h5>
-                    <p class="profile-position px-1 pt-1" style="font-size: 0.8rem; margin: 0;">Co-Founder</p>
-                    <a href="mailto:Rameshwari@aketintregretedsolutions.com" class="send-mail-button"
-                      style="padding: 2px 5px; font-weight: 600; font-size: 16px;">
-                      mail <i class="bi bi-arrow-right-circle-fill"></i>
-                    </a>
+      
+              <!-- Rameshwari Gaikwad -->
+              <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                  <div class="team-profile">
+                      <img src="assets/img/Rameshwari_Gaikwad.png" alt="Rameshwari Gaikwad" class="profile-image">
+                      <div class="profile-info">
+                          <h5 class="profile-name">Mrs. Rameshwari Gaikwad</h5>
+                          <p class="profile-position">Co-Founder</p>
+                          <a href="mailto:Rameshwari@aketintregretedsolutions.com" class="send-mail-button">
+                              mail <i class="bi bi-arrow-right-circle-fill"></i>
+                          </a>
+                      </div>
                   </div>
-                </div>
               </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
-              <div class="card flex-fill py-3 px-4"
-                style="border-radius: 50px; border:1px solid #E08300; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
-                <div class="card-body d-flex align-items-center" data-aos="zoom-out" data-aos-delay="400"
-                  style="height: 60px; padding: 5px;">
-                  <img src="assets\img\Ketan_Barge.png" alt="Ketan Barge" class="profile-image"
-                    style="width: 70px; height: 70px; border-radius: 50%; margin-right: 10px;">
-                  <div class="text-left"> <!-- Added a div for text alignment -->
-                    <h5 class="profile-name px-1 pt-1" style="font-size: 1rem; font-weight: bolder; margin: 0;">Mr. Ketan Barge</h5>
-                    <p class="profile-position px-1 pt-2" style="font-size: 0.8rem; margin: 0;">CEO</p>
-                    <a href="mailto:Ketan@aketintregretedsolutions.com" class="send-mail-button"
-                      style="padding: 2px 5px; font-weight: 600; font-size: 16px;">
-                      mail <i class="bi bi-arrow-right-circle-fill"></i>
-                    </a>
+      
+              <!-- Ketan Barge -->
+              <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                  <div class="team-profile">
+                      <img src="assets/img/Ketan_Barge.png" alt="Ketan Barge" class="profile-image">
+                      <div class="profile-info">
+                          <h5 class="profile-name">Mr. Ketan Barge</h5>
+                          <p class="profile-position">CEO</p>
+                          <a href="mailto:Ketan@aketintregretedsolutions.com" class="send-mail-button">
+                              mail <i class="bi bi-arrow-right-circle-fill"></i>
+                          </a>
+                      </div>
                   </div>
-                </div>
               </div>
-            </div>
           </div>
-        </div>
+      </div>
 
       </div>
 
@@ -388,7 +385,7 @@
               <div class="portfolio-info">
                 <div class="caption py-3">
                   <h4>Copeland India Pvt Ltd.</h4>
-                  <p>(Networking)</p>
+                  <p>(CCTV, DATA and Networking)</p>
                 </div>
               </div>
             </div>
@@ -402,18 +399,6 @@
                 <div class="caption">
                   <h4>Crane Process Flow & Technologies India Pvt. Ltd.</h4>
                   <p>(CCTV, Data & Networking)</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item" data-category="Completed">
-            <div class="portfolio-box shadow rounded-4">
-              <img src="assets\portfolio\LBS_College_Satara.jpg" alt="LBS_College_Satara" title="portfolio 1 picture"
-                class="img-fluid">
-              <div class="portfolio-info">
-                <div class="caption py-4">
-                  <h4>LBS College, Satara</h4>
-                  <p>(CCTV Surveillance System)</p>
                 </div>
               </div>
             </div>
@@ -437,7 +422,7 @@
               <div class="portfolio-info">
                 <div class="caption py-3">
                   <h4>Vedant Tools pvt. Ltd.</h4>
-                  <p>(CCTV, Networking, Fire Alarm & PA System)</p>
+                  <p>(CCTV, Networking, Fire Alarm & PA System,EPABX)</p>
                 </div>
               </div>
             </div>
@@ -462,18 +447,6 @@
                 <div class="caption py-3">
                   <h4>TBK India Pvt. Ltd.</h4>
                   <p>(CCTV Surveillance System)</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item" data-category="Completed">
-            <div class="portfolio-box shadow rounded-4">
-              <img src="assets\portfolio\Copeland_India_Pvt_Ltd.jpg" alt="Copeland_India_Pvt_Ltd" title="portfolio 6 picture"
-                class="img-fluid">
-              <div class="portfolio-info">
-                <div class="caption py-3">
-                  <h4>Copeland India Pvt. Ltd.</h4>
-                  <p>(CCTV, DATA and Networking)</p>
                 </div>
               </div>
             </div>
@@ -516,18 +489,6 @@
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item" data-category="Completed">
             <div class="portfolio-box shadow rounded-4">
-              <img src="assets\portfolio\Vedant_Tools_pvt_Ltd.avif" alt="Vedant_Tools_pvt_Ltd" title="portfolio 9 picture"
-                class="img-fluid">
-              <div class="portfolio-info">
-                <div class="caption py-1">
-                  <h4>Vedant Tools Pvt. Tools.</h4>
-                  <p>(Data, EPABX, CCTV Surveillance and Networking System)</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item" data-category="Completed">
-            <div class="portfolio-box shadow rounded-4">
               <img src="assets\portfolio\Sai_Services_Spare_and_Accessories_Pvt_Ltd.jpg" alt="Sai_Services_Spare_and_Accessories_Pvt_Ltd" title="portfolio 9 picture"
                 class="img-fluid">
               <div class="portfolio-info">
@@ -537,13 +498,101 @@
               </div>
             </div>
           </div>
+          <div class="col-lg-4 col-md-6 portfolio-item" data-category="Completed">
+            <div class="portfolio-box shadow rounded-4">
+              <img src="assets\portfolio\LBS_College_Satara.jpg" alt="LBS_College_Satara" title="portfolio 1 picture"
+                class="img-fluid">
+              <div class="portfolio-info">
+                <div class="caption py-4">
+                  <h4>LBS College, Satara</h4>
+                  <p>(CCTV Surveillance System)</p>
+                </div>
+              </div>
+            </div>
+          </div>
           
         </div>
       </div>
-    </section>
+    </section><!--/portfoilio  -->
+
+
+    <!-- Partners Section -->
+    <section id="clients" class="clients section">
+      <div class="container section-title" data-aos="fade-up" data-aos-delay="200">
+        <h2>Our Esteemed Partners</h2>
+        <p style="text-align: center; align-items: start;">
+          Collaborating with trust, innovation, and shared success to achieve excellence together...
+        </p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/bosch.png" class="img-fluid" alt="bosch"></div>
+            <!-- <div class="swiper-slide"><img src="assets/img/clients/CocaCola.png" class="img-fluid" alt="CocaCola"></div> -->
+            <!-- <div class="swiper-slide"><img src="assets/img/clients/copeland.webp" class="img-fluid" alt="copeland"></div> -->
+            <div class="swiper-slide"><img src="assets/img/clients/cp_plus.png" class="img-fluid" alt="cp_plus"></div>
+            <!-- <div class="swiper-slide"><img src="assets/img/clients/crane.png" class="img-fluid" alt="crane"></div> -->
+            <div class="swiper-slide"><img src="assets/img/clients/d-link.png" class="img-fluid" alt="d-link"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/eSSL.png" class="img-fluid" alt="eSSL"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/ezviz.png" class="img-fluid" alt="ezviz"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/HIK_VISION.png" class="img-fluid" alt="HIK_VISION"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/honeywell.png" class="img-fluid" alt="honeywell"></div>
+            <!-- <div class="swiper-slide"><img src="assets/img/clients/IFB.png" class="img-fluid" alt="IFB"></div> -->
+            <div class="swiper-slide"><img src="assets/img/clients/impact.png" class="img-fluid" alt="impact"></div>
+            <!-- <div class="swiper-slide"><img src="assets/img/clients/Innova_Rubbers.gif" class="img-fluid" alt="Innova_Rubbers"></div> -->
+            <!-- <div class="swiper-slide"><img src="assets/img/clients/LBS.jpg" class="img-fluid" alt="LBS"></div> -->
+            <div class="swiper-slide"><img src="assets/img/clients/matrix.png" class="img-fluid" alt="matrix"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/netgear.jpg" class="img-fluid" alt="netgear"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/prama.png" class="img-fluid" alt="prama"></div>
+            <!-- <div class="swiper-slide"><img src="assets/img/clients/scon.svg" class="img-fluid" alt="scon"></div> -->
+            <!-- <div class="swiper-slide"><img src="assets/img/clients/TBK.png" class="img-fluid" alt="TBK"></div> -->
+            <div class="swiper-slide"><img src="assets/img/clients/wd.png" class="img-fluid" alt="wd"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Partners Section -->
+
 
     <!-- Features Cards Section -->
-    <section id="features-cards" class="features-cards section">
+    <section id="features-cards" class="features-cards section light-background">
 
       <div class="container">
         <div class="container section-title" data-aos="fade-up" data-aos-delay="200">
@@ -594,12 +643,13 @@
 
     </section><!-- /Features Cards Section -->
 
-    <!-- Clients Section -->
+
+   <!-- Clients Section -->
     <section id="clients" class="clients section">
       <div class="container section-title" data-aos="fade-up" data-aos-delay="200">
-        <h2>Our Esteemed Clients</h2>
+        <h2>Our Clients</h2>
         <p style="text-align: center; align-items: start;">
-          AKET got an opportunity to work with many prestigious clients over the years.
+          Our esteemed clients are the cornerstone of our success, and we are committed to delivering excellence, trust, and innovation to meet their needs.
         </p>
       </div>
 
@@ -640,26 +690,14 @@
             }
           </script>
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/bosch.png" class="img-fluid" alt="bosch"></div>
             <div class="swiper-slide"><img src="assets/img/clients/CocaCola.png" class="img-fluid" alt="CocaCola"></div>
             <div class="swiper-slide"><img src="assets/img/clients/copeland.webp" class="img-fluid" alt="copeland"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/cp_plus.png" class="img-fluid" alt="cp_plus"></div>
             <div class="swiper-slide"><img src="assets/img/clients/crane.png" class="img-fluid" alt="crane"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/d-link.png" class="img-fluid" alt="d-link"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/eSSL.png" class="img-fluid" alt="eSSL"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/ezviz.png" class="img-fluid" alt="ezviz"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/HIK_VISION.png" class="img-fluid" alt="HIK_VISION"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/honeywell.png" class="img-fluid" alt="honeywell"></div>
             <div class="swiper-slide"><img src="assets/img/clients/IFB.png" class="img-fluid" alt="IFB"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/impact.png" class="img-fluid" alt="impact"></div>
             <div class="swiper-slide"><img src="assets/img/clients/Innova_Rubbers.gif" class="img-fluid" alt="Innova_Rubbers"></div>
             <div class="swiper-slide"><img src="assets/img/clients/LBS.jpg" class="img-fluid" alt="LBS"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/matrix.png" class="img-fluid" alt="matrix"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/netgear.jpg" class="img-fluid" alt="netgear"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/prama.png" class="img-fluid" alt="prama"></div>
             <div class="swiper-slide"><img src="assets/img/clients/scon.svg" class="img-fluid" alt="scon"></div>
             <div class="swiper-slide"><img src="assets/img/clients/TBK.png" class="img-fluid" alt="TBK"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/wd.png" class="img-fluid" alt="wd"></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -669,7 +707,7 @@
     </section><!-- /Clients Section -->
 
     <!-- Stats Section -->
-    <section id="stats" class="stats section">
+    <section id="stats" class="stats section light-background">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -717,20 +755,37 @@
     </section><!-- /Stats Section -->
 
     <!-- Services Section -->
-    <section id="services" class="services section light-background">
+    <section id="services" class="services section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Services</h2>
-        <p>Comprehensive integrated systems for security and communication tailored to organizational needs.</p>
+        <p>Comprehensive integrated systems for security and communication 
+          tailored to organizational needs.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row g-4">
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card d-flex orange">
+          <div class="col-lg-6" id="IT_Turnkey_projects" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-cpu"></i>
+              </div>
+              <div>
+                <h3>IT Turnkey services</h3>
+                <p>We provide end-to-end IT Turnkey Solutions, managing hardware, software, networking,
+                   and security. Ensuring seamless integration and scalability, we deliver hassle-free,
+                    fully managed IT services—allowing you to focus on business growth and innovation with 
+                    confidence.</p>
+                <!-- <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a> -->
+              </div>
+            </div>
+          </div><!-- End Service Card -->
+
+          <div class="col-lg-6" id="CCTV_Surveillance_System"  data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card d-flex">
               <div class="icon flex-shrink-0">
                 <i class="bi bi-camera"></i>
               </div>
@@ -745,7 +800,7 @@
           </div><!-- End Service Card -->
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card d-flex red">
+            <div class="service-card d-flex" id="Data_and_Networking">
               <div class="icon flex-shrink-0">
                 <i class="bi bi-server"></i>
               </div>
@@ -759,8 +814,8 @@
             </div>
           </div><!-- End Service Card -->
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card d-flex green">
+          <div class="col-lg-6" id="Fire_Alarm_System" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card d-flex">
               <div class="icon flex-shrink-0">
                 <i class="bi bi-exclamation-triangle"></i>
               </div>
@@ -774,21 +829,6 @@
             </div>
           </div><!-- End Service Card -->
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-card d-flex blue">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-megaphone"></i>
-              </div>
-              <div>
-                <h3>Public Address (PA) System</h3>
-                <p>A Public Address (PA) system amplifies sound to communicate with large audiences
-                  in places like schools and stadiums. It consists of microphones, amplifiers, and
-                  loudspeakers for clear announcements..</p>
-                <!-- <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a> -->
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
         </div>
 
       </div>
@@ -797,7 +837,7 @@
     </section><!--/Services Section-->
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <section id="contact" class="contact section light-background">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -899,7 +939,7 @@
 
   </main>
 
-  <footer id="footer" class="footer bg-light py-5 border-top">
+  <footer id="footer" class="footer py-5 border-top">
     <div class="container">
       <div class="row gy-4">
         <!-- Footer About -->
@@ -913,7 +953,7 @@
             <p class="mb-1">Tal - Koregaon,</p>
             <p class="mb-1">Dist - Satara - 415501</p>
             <p class="mt-3"><strong>Phone:</strong> <a href="tel:+918600862622" class="text-dark">+91 8600862622</a></p>
-            <p><strong>Email:</strong> <a href="mailto:aketintregretedsolutions.com" class="text-dark">aketintregretedsolutions.com</a></p>
+            <p><strong>Email:</strong> <a href="mailto:aketintregretedsolutions.com" class="text-dark">aketintegratedsolutions@gmail.com</a></p>
           </div>
           <div class="d-flex social-links mt-3">
             <a href="https://wa.me/918600862622" class="me-3 text-dark fs-4"><i class="bi bi-whatsapp"></i></a>
@@ -938,10 +978,10 @@
         <div class="col-lg-4 col-md-6 px-4">
           <h5 class="fw-bold f-links border-bottom pb-2">Our Services</h5>
           <ul class="list-unstyled  ps-3">
-            <li class="mb-2"><i class="bi bi-chevron-right me-2"></i><a href="#services" class="text-dark text-decoration-none">CCTV Surveillance System</a></li>
-            <li class="mb-2"><i class="bi bi-chevron-right me-2"></i><a href="#services" class="text-dark text-decoration-none">Data and Networking</a></li>
-            <li class="mb-2"><i class="bi bi-chevron-right me-2"></i><a href="#services" class="text-dark text-decoration-none">Fire Alarm System</a></li>
-            <li class="mb-2"><i class="bi bi-chevron-right me-2"></i><a href="#services" class="text-dark text-decoration-none">Public Address (PA) System</a></li>
+            <li class="mb-2"><i class="bi bi-chevron-right me-2"></i><a href="#IT_Turnkey_projects" class="text-dark footer_services  text-decoration-none">IT Turnkey Services</a></li>
+            <li class="mb-2"><i class="bi bi-chevron-right me-2"></i><a href="#CCTV_Surveillance_System" class="text-dark footer_services text-decoration-none">CCTV Surveillance System</a></li>
+            <li class="mb-2"><i class="bi bi-chevron-right me-2"></i><a href="#Data_and_Networking" class="text-dark footer_services text-decoration-none">Data and Networking</a></li>
+            <li class="mb-2"><i class="bi bi-chevron-right me-2"></i><a href="#Fire_Alarm_System" class="text-dark footer_services text-decoration-none">Fire Alarm System</a></li>
           </ul>
         </div>
       </div>
@@ -949,7 +989,7 @@
   
     <div class="container text-center mt-4 border-top pt-3">
       <p class="mb-0">&copy; <strong>Jijau Software's</strong>. All Rights Reserved.</p>
-      <p class="mb-0">Designed by <a href="http://jijausoftwares.in/" class="text-dark">Jijau Software</a></p>
+      <p class="mb-0">Designed by <a href="http://jijausoftwares.in/">Jijau Software</a></p>
     </div>
   </footer>
   
